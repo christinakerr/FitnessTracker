@@ -9,12 +9,31 @@ const workoutPlanSchema = new Schema({
     },
     exercises: [
         {
-            type: Schema.Types.ObjectId,
-            ref: "Exercise"
+            type: {
+                type: String
+            },
+            name: {
+                type: String
+            },
+            duration: {
+                type: Number
+            },
+            weight: {
+                type: Number
+            },
+            reps: {
+                type: Number
+            },
+            sets: {
+                type: Number
+            },
+            distance: {
+                type: Number
+            },
         }
     ]
 })
 
-const WorkoutPlan = mongoose.model("WorkoutPlan", workoutPlanSchema)
+const Workout = mongoose.model("WorkoutPlan", workoutPlanSchema)
 
-module.exports = WorkoutPlan;
+module.exports = Workout;
